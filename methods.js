@@ -1,3 +1,4 @@
+// this is created to check diff path
 const express = require("express");
 const app = express();
 
@@ -10,7 +11,7 @@ let users = {};
 app.get("/users", (req, res) => {
   res.send(users);
 });
-
+//this is post method
 app.post("/users", (req, res) => {
   console.log(req.body);
   users = req.body;
