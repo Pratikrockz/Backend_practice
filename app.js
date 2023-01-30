@@ -1,28 +1,33 @@
-//Create server
-const express = require("express");
-const app = express();
+const express = require("express")
+const path = require("path")
+const app = express()
+app.listen(3000)
+//Serving static files
+app.use('/static', express.static('static'))
 
-app.listen(3000);
+// use template engine as pug
+app.set('view engine', 'pug')
 
-// this middle ware must be used to detect every file in folder
-app.use(express.static("./Views", { root: __dirname }));
+//set the template dir
+app.set('views', path.join(__dirname, 'views'))
 
-app.get("/", (req, res) => {
-  res.sendFile("./Views/index.html", { root: __dirname });
-  console.log(req.url);
+//PUG demo endpoint
+app.get('/demo', (req, res) => {
+  res.status(200).render('demo', { title: 'PUG', message: 'Hello there! I am using pug as template engine' })
+})
+app.get('/index', (req, res) => {
+  res.status(200).render('index')
 });
-app.get("/about", (req, res) => {
-  res.sendFile("./Views/about.html", { root: __dirname });
-});
 
-//Redirect
-app.get("/about-me", (req, res) => {
-  res.redirect("/about");
-});
 
-//This middleware must be used iat last position
-//404 page
+app.get('/', (req, res) => {
+  res.status(200).send("this is home page of express web")
+})
 
-app.use((req, res) => {
-  res.status(404).sendFile("./Views/404.html", { root: __dirname });
-});
+app.get('/about', (req, res) => {
+  res.status(200).send("this is about of home page of express web")
+})
+
+app.get('/error', (req, res) => {
+  res.status(404).send("The page is not found")
+})
