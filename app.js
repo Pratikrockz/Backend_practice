@@ -15,8 +15,8 @@ app.set('views', path.join(__dirname, 'views'))
 app.get('/demo', (req, res) => {
   res.status(200).render('demo', { title: 'PUG', message: 'Hello there! I am using pug as template engine' })
 })
-app.get('/index', (req, res) => {
-  res.status(200).render('index')
+app.get('/form', (req, res) => {
+  res.status(200).render('form')
 });
 
 
