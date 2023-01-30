@@ -1,0 +1,60 @@
+h1 {
+
+    padding-block: 4px;
+    text-align: center;
+}
+
+ul {
+    display: flex;
+    flex-direction: row;
+    background-color: grey;
+    color: white;
+
+}
+
+li {
+    list-style: none;
+    padding: 3px 4px;
+    color: black;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    padding: 3px 12px;
+}
+
+.container {
+    background-color: grey;
+    max-width: 70%;
+    margin: auto;
+}
+
+h2 {
+    text-align: center;
+}
+
+input,
+textarea {
+    display: block;
+    padding: 3px;
+    margin: auto;
+    width: 60%;
+    outline: none;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: bisque;
+}
+
+.btn {
+    display: block;
+    text-align: center;
+    color: black;
+    margin: 4px auto;
+    border: 2px solid black;
+    border-radius: 9px;
+    background-color: cyan;
+    cursor: pointer;
+}
