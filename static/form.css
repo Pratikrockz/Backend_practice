@@ -1,3 +1,9 @@
+* {
+    box-sizing: border-box;
+}
+
+
+
 h1 {
 
     padding-block: 4px;
@@ -29,8 +35,8 @@ nav {
 
 .container {
     background-color: grey;
-    max-width: 70%;
-    margin: auto;
+    max-width: 245%;
+    margin: 23px;
 }
 
 h2 {
@@ -40,9 +46,9 @@ h2 {
 input,
 textarea {
     display: block;
-    padding: 3px;
-    margin: auto;
-    width: 60%;
+    padding: 23px;
+    margin: 15px;
+    width: 78%;
     outline: none;
     border: 2px solid black;
     border-radius: 5px;
